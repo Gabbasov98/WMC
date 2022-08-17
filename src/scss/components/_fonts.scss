@@ -1,0 +1,6 @@
+@import '../_mixins';
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@400;700&display=swap');
+@include font-face('Gilroy', 'Gilroy-Regular', 400);
+@include font-face('Gilroy', 'Gilroy-Medium', 500);
+@include font-face('Gilroy', 'Gilroy-Semibold', 600);
+@include font-face('Gilroy', 'Gilroy-Bold', 700);

@@ -1,0 +1,486 @@
+@import "../vars";
+
+.main{
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  .container{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
+  &__content{
+    transform: translateY(5%);
+    margin: 0 auto;
+    width: 837px;
+    max-width: 100%;
+    text-align: center;
+  }
+  &__title{
+    position: relative;
+    span{
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &__shape{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+  }
+  &__btn{
+    margin: 50px auto 0;
+    position: relative;
+    z-index: 2;
+    width: 215px;
+    height: 54px;
+  }
+}
+
+.fin-guarantee{
+  overflow: hidden;
+  position: relative;
+  padding: 180px 0 0;
+  background: radial-gradient(50% 50% at 50% 50%, #F86D6D 0%, #A60F0F 100%);
+  box-shadow: inset 0px -32px 20px rgba(0, 0, 0, 0.2);
+  &__content{
+    width: 1025px;
+    max-width: 100%;
+    background: #FFFFFF;
+    padding: 60px 70px 458px;
+    margin: 0 auto;
+  }
+  &__subtitle{
+    font-weight: 400;
+    margin-top: 20px;
+  }
+  &__desc{
+    margin-top: 30px;
+    max-width: 855px;
+  }
+  &__img{
+    position: absolute;
+    bottom: -205px;
+    left: 50%;
+    transform: translate(-50%,60px);
+    &.animate-cards--active{
+      transform: translate(-50%,0);
+    }
+  }
+}
+
+.guarantors{
+  overflow: hidden;
+  padding: 100px 0 136px;
+  background-image: url(../img/pattern.png);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  .swiper{
+    &-slide{
+      position: relative;
+    }
+    &-scrollbar{
+      background: #F2F2F2;
+      height: 4px;
+      border-radius: 100px;
+      width: 100%;
+      left: 0;
+      &-drag{
+        border-radius: 100px;
+        background: $primary;
+        &::before,
+        &::after{
+          content: '';
+          position: absolute;
+          width: 6px;
+          height: 100%;
+          background-color: #fff;
+          top: 0;
+        }
+        &::before{
+          right: 100%;
+          border-radius: 20% 0 0 20%;
+        }
+        &::after{
+          left: 100%;
+          border-radius: 0 20% 20% 0;
+        }
+      }
+    }
+  }
+  &__slider{
+    margin-top: 80px;
+    position: relative;
+    padding-bottom: 62px;
+  }
+  &__content{
+    max-width: 561px;
+  }
+  &__img{
+    position: absolute;
+    left: 561px;
+    bottom: 0;
+    max-width: calc(100% - 561px);
+    img{
+      width: 100%;
+    }
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+  }
+  &__logo{
+    width: 200px;
+    margin-right: 20px;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  &__price{
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 160%;
+    letter-spacing: 0.2px;
+    color: $green;
+    font-family: $font2;
+    white-space: nowrap;
+  }
+  &__subtitle{
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.2px;
+    margin-left: 10px;
+  }
+  &__desc{
+    margin-top: 30px;
+  }
+  &__slide2{
+    .guarantors__img{
+      bottom: -42px;
+      left: 660px;
+      max-width: calc(100% - 660px);
+    }
+  }
+  &__slide3{
+    .guarantors__img{
+      bottom: -4px;
+      left: 644px;
+      max-width: calc(100% - 644px);
+    }
+  }
+  &__slide4{
+    .guarantors__img{
+      bottom: 47px;
+      left: 615px;
+      max-width: calc(100% - 615px);
+    }
+  }
+  &__tabs{
+    margin-top: 50px;
+  }
+}
+
+.guarantors-tab{
+  max-width: 263px;
+  &:hover{
+    cursor: pointer;
+    opacity: .7;
+  }
+  &--active{
+    pointer-events: none;
+    .guarantors-tab{
+      &__title,
+      &__desc,
+      &__price{
+        opacity: 0.33;
+        color: #000000;
+      }
+      &__region{
+        color: #101010;
+        opacity: 0.5;
+      }
+    }
+  }
+  &__region,
+  &__desc{
+    font-size: 14px;
+    line-height: 157%;
+    letter-spacing: 0.2px;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    margin-top: 5px;
+  }
+  &__region{
+    font-weight: 700;
+    color: $primary;
+  }
+  &__desc{
+    margin-top: 10px;
+    span{
+      margin-top: 5px;
+      display: block;
+    }
+  }
+  &__price{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    color: #55BE68;
+    font-family: $font2;
+  }
+}
+
+.geography{
+  padding: 100px 0 0;
+  color: #FFFFFF;
+  background: radial-gradient(50% 50% at 50% 50%, #3A513E 0%, #1D1F22 100%);
+  &__info{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+  &__desc{
+    max-width: 700px;
+  }
+  &__subtitle{
+    margin-left: 60px;
+    color: $green;
+    width: 300px;
+    flex-shrink: 0;
+  }
+  &__img{
+    margin-top: 2px;
+    img{
+      width: 100%;
+    }
+    &--desktop{
+      display: block;
+    }
+    &--mob{
+      display: none;
+    }
+  }
+}
+
+.logistic{
+  padding: 80px 0 86px;
+  &__inner{
+    display: flex;
+  }
+  &__left{
+    width: 520px;
+    flex-shrink: 0;
+    text-align: center;
+    position: relative;
+    margin-right: 60px;
+    padding-top: 128px;
+  }
+  &__right{
+    max-width: 535px;
+  }
+  &__title{
+    color: #8F0505;
+  }
+  &__img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-52%,-50%);
+    z-index: -1;
+  }
+  &__subtitle2,
+  &__desc{
+    margin-top: 30px;
+  }
+  &__subtitle2{
+    font-weight: 400;
+  }
+}
+
+.about{
+  background: #FDFAF2;
+  padding: 100px 0 155px;
+  &__title{
+    color: $greenDark;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: 47% auto;
+    gap:24px 4%;
+    margin-top: 30px;
+  }
+  &__wrap{
+    padding: 82px 52px 95px;
+    background-color: #FFFFFF;
+    background-image: url(../img/pattern2.png);
+    background-repeat: repeat-y;
+    background-position: right top;
+    box-shadow: 0px 4px 10px rgba(91, 31, 31, 0.1), 0px 8px 20px rgba(86, 61, 58, 0.2);
+    text-align: center;
+  }
+  &__desc{
+    p{
+      line-height: inherit;
+      &:not(:last-child){
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &__desc2{
+    max-width: 370px;
+    margin: 30px auto 0;
+  }
+  &__btn{
+    margin: 30px auto 0;
+    width: 197.78px;
+    height: 54px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .logistic{
+    &__left{
+      width: 450px;
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .main{
+    &__btn{
+      margin-top: 20px;
+    }
+  }
+
+  .fin-guarantee{
+    padding-top: 80px;
+    &__content{
+      padding: 32px 16px 518px;
+    }
+    &__img{
+      bottom: -160px;
+    }
+  }
+
+  .guarantors{
+    padding: 48px 0 112px;
+    background-size:auto 51px;
+    &__slider{
+      margin-top: 32px;
+      padding: 0 0 40px;
+    }
+    &__content{
+      max-width: 100%;
+    }
+    &__img{
+      position: static;
+      width: unset;
+      height: 200px;
+      max-width: 100% !important;
+      img{
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+      }
+    }
+    &__top{
+      margin-top: 30px;
+      flex-direction: column;
+      align-items: unset;
+    }
+    &__price{
+      order: 2;
+    }
+    &__subtitle{
+      margin: 20px 0 0;
+    }
+    &__desc{
+      margin-top: 16px;
+    }
+  }
+
+  .geography{
+    padding: 64px 0 0;
+    &__info{
+      display: block;
+      margin-top: 7px;
+    }
+    &__desc{
+      font-size: 14px;
+    }
+    &__subtitle{
+      margin: 40px 0 0;
+      width: unset;
+    }
+
+  }
+
+  .logistic{
+    padding: 48px 0 0;
+    overflow: hidden;
+    &__inner{
+      flex-wrap: wrap;
+    }
+    &__right{
+      order: -1;
+      width: 100%;
+      max-width: 100%;
+    }
+    &__left{
+      width: 100%;
+      padding: 232px 0 285px;
+      margin: 0;
+    }
+    &__title{
+      max-width: 330px;
+      margin: 0 auto;
+    }
+  }
+
+  .about{
+    padding: 48px 0 64px;
+    &__inner{
+      grid-template-columns: 100%;
+    }
+    &__wrap{
+      padding: 48px 16px 120px;
+      background-image: url(../img/pattern.png);
+      background-repeat: repeat-x;
+      background-position: left bottom;
+      background-size:auto 51px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px){
+  .main{
+    &__shape{
+      width: 750px;
+    }
+  }
+
+  .guarantors{
+    &__img{
+      height: 142px;
+    }
+  }
+
+  .geography{
+    &__img{
+      margin-top: 16px;
+      &--desktop{
+        display: none;
+      }
+      &--mob{
+        display: block;
+      }
+    }
+  }
+}

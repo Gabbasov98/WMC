@@ -1,0 +1,80 @@
+@import "../vars";
+.footer{
+  background: $black;
+  color: #FFFFFF;
+  padding: 122px 0 99px;
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 48px;
+  }
+  &__logo{
+    width: 85px;
+    display: block;
+  }
+  &__copyright,
+  &__cookie,
+  &__protect,
+  &__phone,
+  &__mail,
+  &__address{
+    font-size: 16px;
+    line-height: 156%;
+    letter-spacing: 0.2px;
+  }
+  &__copyright,
+  &__protect{
+    margin-top: 34px;
+  }
+  &__cookie{
+    margin-top: 5px;
+  }
+  &__city,
+  &__link{
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.2px;
+  }
+  &__city{
+    font-family: $font2;
+  }
+  &__phone{
+    display: block;
+    margin-top: 16px;
+  }
+  &__mail{
+    font-weight: 600;
+    margin-top: 8px;
+    color: $primary;
+    display: block;
+  }
+  &__address{
+    margin-top: 6px;
+  }
+  &__links{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  &__link{
+    font-weight: 700;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    color: $green;
+    &:hover{
+      color:#fff;
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .footer{
+    padding: 64px 0 83px;
+    &__inner{
+      grid-template-columns: 100%;
+    }
+    &__links{
+      gap: 24px;
+    }
+  }
+}

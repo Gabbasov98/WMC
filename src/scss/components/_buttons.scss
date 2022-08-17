@@ -1,0 +1,38 @@
+@import "../vars";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-out .225s;
+    padding: 0;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-red{
+    background: $primary;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    border: 1.5px solid transparent;
+    border-image: linear-gradient(#F84B4B , #D91717);
+    border-image-slice: 1;
+    svg{
+        margin-left: 24px;
+    }
+    &:hover{
+        color: #FFFFFF;
+        background: #FF2C2C;
+    }
+    &:active{
+        color: #FFFFFF;
+        background: #C80000;
+    }
+    &:disabled{
+        background: #CBCBCB;
+        border-image: linear-gradient(#DBDBDB , #A4A4A4);
+        cursor: not-allowed;
+    }
+}

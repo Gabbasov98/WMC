@@ -1,0 +1,62 @@
+@import "../vars";
+@import "../mixins";
+
+.display1,
+.display2,
+.display3{
+  font-family: $font2;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 117%;
+  letter-spacing: -0.2px;
+}
+
+.display2{
+  font-size: 56px;
+}
+.display3{
+  font-size: 46px;
+}
+
+.display4{
+  font-family: $font2;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+}
+
+.body-text{
+  font-size: 17px;
+  line-height: 176%;
+  letter-spacing: 0.2px;
+}
+
+.linear-yellow{
+  @include yellowLinear;
+}
+
+@media screen and (max-width: 992px){
+  .display1{
+    font-size: 57px;
+  }
+  .display2{
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .display1{
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .display1{
+    font-size: 40px;
+  }
+
+  .display3{
+    font-size: 34px;
+  }
+}
