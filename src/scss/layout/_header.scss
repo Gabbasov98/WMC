@@ -32,6 +32,7 @@
     }
   }
   &__mob{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -86,6 +87,9 @@
     svg{
       margin-right: 10px;
     }
+  }
+  &__burger{
+    display: none;
   }
   &--page{
     position: static;
